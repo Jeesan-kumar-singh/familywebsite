@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Colorful Family</title>
+  <style>
+    :root {
+      --bg: #f0f8ff;
+      --text: #333;
+      --card-bg: #ffffff;
+      --card-border: #ccc;
+      --primary: #6c63ff;
+    }
+
+    body.dark {
+      --bg: #121212;
+      --text: #f0f0f0;
+      --card-bg: #1e1e1e;
+      --card-border: #444;
+      --primary: #bb86fc;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      transition: all 0.3s ease;
+    }
+
+    header {
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      color: #333;
+      text-align: center;
+      padding: 2rem 1rem;
+      position: relative;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    #themeToggle {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .intro {
+      text-align: center;
+      margin: 2rem;
+      font-size: 1.2rem;
+    }
+
+    .family-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border: 2px solid var(--card-border);
+      border-radius: 12px;
+      text-align: center;
+      padding: 1.5rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+
+    .card h2 {
+      margin: 0.5rem 0;
+      color: var(--primary);
+    }
+
+    .card p {
+      font-size: 0.95rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: linear-gradient(to right, #fad0c4, #ff9a9e);
+      margin-top: 2rem;
+    }
+
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>👨‍👩‍👧‍👦 Meet My Family</h1>
+    <button id="themeToggle">🌙 Toggle Theme</button>
+  </header>
+
+  <section class="intro">
+    <p>We're a vibrant family full of love, dreams, and laughter. Here's a little bit about each of us!</p>
+  </section>
+
+  <section class="family-cards">
+    <div class="card">
+      <img src="file:///C:/Users/hp/Desktop/portfolio/pic1.jpg" alt="Me" />
+      <h2>JEESAN KUMAR SINGH</h2>
+      <p>Me- Software Engineer who loves coding and coffee ☕.</p>
+    </div>
+    <div class="card">
+      <img src="file:///C:/Users/hp/Documents/mummy.jpg" alt="Mom" />
+      <h2>SUPRIYA SINGH</h2>
+      <p>Mother - Creative and hardworking housewife. 🎨🌿.</p>
+    </div>
+    <div class="card">
+      <img src="file:///C:/Users/hp/Documents/di.jpg" alt="SISTER" />
+      <h2>KHUSHBU KUMARI</h2>
+      <p>Sister - A elder girl who is engage is family responsibilities and also a Teacher. </p>
+    </div>
+    <div class="card">
+      <img src="file:///C:/Users/hp/Documents/papa%20.jpg" alt="dad" />
+      <h2>MR. NARENDRA KUMAR SINGH</h2>
+      <p>Father - The backbone of the whole family and the most lovely , joyful person. 🚀🌌.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 The Doe Family — Made with ❤️ and fun.</p>
+  </footer>
+
+  <script>
+    const toggleButton = document.getElementById('themeToggle');
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      toggleButton.textContent = document.body.classList.contains('dark') ? '☀️ Light Mode' : '🌙 Dark Mode';
+    });
+  </script>
+</body>
+</html>
